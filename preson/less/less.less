@@ -1,0 +1,81 @@
+@import "var.less";
+.container{
+  &{
+    width:100%;
+    margin: auto;
+    margin-top: 30px;
+    position:absolute;
+    left:0;
+    right: 0;
+    .clear;
+  }
+  &>.row{
+    width:100%;
+    .clear;
+  }
+  &-fluid{
+    width:100%;
+    margin:auto;
+    margin-top: 30px;
+    position:absolute;
+    left:0;
+    right: 0;;
+  }
+  &-fluid>.row{
+    width: 100%;
+    .clear;
+  }
+}
+/*小屏*/
+.loop;
+/*中屏*/
+@media screen and (min-width:@num1 ) {
+  .container{
+    width:@num1;
+    margin:0 auto;
+    margin-top: 30px;
+  }
+  .container-fluid{
+     width:@num1;
+     margin:0 auto;
+     margin-top: 30px;
+   }
+  .loop(m);
+}
+/*大屏*/
+@media screen and (min-width:@num2 ) {
+  .container{
+    width:@num2;
+
+    margin-top: 30px;
+  }
+  .container-fluid{
+    width:@num2;
+    margin:0 auto;
+    margin-top: 30px;
+  }
+  .loop(l);
+}
+
+.loop(@type:s,@i:1) when(@i<=@cols){
+  .container>.row>.col-@{type}-@{i}{
+    width:@i/@cols*100%;
+    float: left;
+  }
+  .container-fluid>.row>.col-@{type}-@{i}{
+    width:@i/@cols*100%;
+    float: left;
+  }
+  .loop(@type,@i+1);
+}
+
+.clear(){
+  &:before,&:after{
+    content: '';
+    display: block;
+  }
+  &:after{
+    clear: both;
+  }
+
+}

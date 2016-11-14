@@ -1,0 +1,235 @@
+/*头*/
+.bigbox{
+    width:100%;
+    height: 100%;
+    position: relative;
+}
+.box{
+    /*width:100%;*/
+    height:540px;
+    /*position: relative;*/
+    background: url("../img/11.jpg") no-repeat;
+    background-position: center top;
+    background-size:contain;
+
+}
+
+.nav-box{
+    /*width:100%;*/
+    height: 44px;
+    /*background: #0000cc;*/
+}
+.nav{
+    /*width:60%;*/
+    height: 100%;
+    float: right;
+}
+.nav li{
+    width:15%;
+    height: 44px;
+    float: left;
+    margin-left:1.4% ;
+    line-height: 44px;
+    cursor: pointer;
+    color: #fff;
+    text-align: center;
+    font-family: "苹方";
+}
+/*介绍*/
+.jieshao{
+    width:100%;
+
+}
+.jieshao:before ,.jieshao:after{
+    display: block;
+    content: "";
+}
+.jieshao:after{
+    clear: both;
+}
+.zhaopian{
+    width:50%;
+    float: left;
+}
+.zp{
+    width:50%px;
+    height: 300px;
+    margin:auto;
+    background: yellow;
+}
+.wenzi{
+    width: 50%;
+    /*height: 300px;*/
+    float: left;
+}
+.con{
+    width:80%;
+    margin:0 auto;
+
+}
+/*技能*/
+.still-title {
+    text-align: center;
+}
+.still-box{
+    height: 250px;
+    text-align: center;
+}
+.still{
+    width:100px;
+    height: 100px;
+    margin:0 auto;
+    text-align: center;
+    line-height: 100px;
+    font-size: 40px;
+    font-family: "萍方";
+    border:5px solid #888888;
+    border-radius:50%
+}
+.still-box strong{
+    display: block;
+    margin-top: 20px;
+    text-align: center;
+    font-size: 20px;
+}
+.works {
+    width:100%;
+    margin-top: 100px;
+}
+
+.work{
+    width:250px;
+    height: 250px;
+    float: left;
+}
+/*大屏*/
+@media screen and (min-width: 1000px){
+  .box{
+    width:100%;
+  }
+    .nav{
+        width:50%;
+        height: 100%;
+        float: right;
+    }
+    /*.large{*/
+        /*display:block;*/
+    /*}*/
+    .small{
+        display: none;
+    }
+    .jieshao{
+        width:100%;
+    }
+    .wenzi{
+        width: 50%;
+        float: left;
+    }
+    .zp{
+        width: 50%;
+        height: 300px;
+        margin: auto;
+    }
+    .con{
+        width:80%;
+        margin:0 auto;
+    }
+}
+/*中屏*/
+@media screen and (max-width: 1000px){
+    .box{
+        width:100%;
+    }
+    .large{
+        width: 100%;
+        margin:0 auto;
+    }
+    .large{
+        display:block;
+    }
+    .small{
+        display: none;
+    }
+    .zhaopian{
+        width:100%;
+        height: 300px;
+
+    }
+    .wenzi{
+        width: 100%;
+        height: 300px;
+    }
+    .zp{
+        width: 50%;
+        height: 300px;
+        margin: auto;
+    }
+    .con{
+        width:80%;
+        margin:0 auto;
+    }
+}
+/*小屏*/
+@media screen and (max-width: 750px){
+    .box{
+        width:100%;
+    }
+    .small{
+        width:100%;
+        background: #000;
+    }
+   .large{
+       display: none;
+   }
+   .small{
+       display: block;
+       margin:0 auto;
+       /*transition: opacity 2s linear ;*/
+   }
+   .small span{
+       margin-left: 20px;
+   }
+   .small li{
+       width: 100%;
+       margin:0 auto;
+   }
+   .list-box{
+       width: 50%;
+       height: 220px;
+       background: #fff;
+       margin:auto;
+       color: #000;
+       /*display: none;*/
+       opacity: 0;
+       transition: opacity 1s linear ;
+   }
+   .list-box li{
+       color: #000;
+       text-align:left;
+       /*padding-left: 20px;*/
+   }
+   .list-box li:hover {
+       background: #ccc;
+   }
+   .small:hover  .list-box{
+     opacity:1;
+   }
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
